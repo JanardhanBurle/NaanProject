@@ -1,0 +1,72 @@
+<br *ngIf="message.endpoint==='USER'">
+<div [ngClass]="{'user-message-card':message.endpoint==='USER','agent-message-card':message.endpoint!=='USER'}">
+  <img style="width: 30px" *ngIf="message.avatar&&message.endpoint==='CHATBOT'" [src]="message.avatar" alt="Chat-bot">
+  <span *ngIf="message.avatar&&message.endpoint==='CHATBOT'">
+    {{ message.timestamp | date:'shortTime' }}
+  </span>
+  <ng-container *ngIf="message.content">
+    <p>{{message.content}}</p>
+  </ng-container>
+  <ng-container *ngIf="message.suggestions">
+    <mat-chip-list aria-label="selection">
+      <mat-chip color="primary" (click)="onClickSuggestion(suggestion)" selected *ngFor="let suggestion of message.suggestions;let i=index">
+        {{suggestion.title}}</mat-chip>
+    </mat-chip-list>
+  </ng-container>
+  <ng-container *ngIf="message.upload_document">
+    <div class="card">
+      <div class="banner">
+        <img class="avatar" src="./assets/images/upload-img.png" alt="upload">
+        <input (change)="fileChangeListener($event.target,'civilId')" class="fileupload-input" type="file" name="myfile" />
+      </div>
+      <h3>{{message.upload_document.name}}</h3>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="message.datepicker">
+    <div class="card">
+      <div class="banner">
+        <img class="avatar" (click)="picker.open()" src="./assets/images/calendar.png" alt="calendar">
+        <mat-form-field class="date-picker-input">
+          <input (dateInput)="orgValueChange(picker)" matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+
+
+      </div>
+      <h3>{{message.datepicker.name}}</h3>
+    </div>
+  </ng-container>
+
+
+  <ng-container *ngIf="message.googleMap">
+    <div class="img-card">
+      <div class="google-maps">
+        <app-google-maps (selectAddressEvent)="selectAddress($event)"></app-google-maps>
+      </div>
+      <h3>Address</h3>
+    </div>
+  </ng-container>
+
+  <!-- <ng-container>
+    <div class="img-card">
+      <div class="personal-info-banner">
+        <app-personal-details></app-personal-details>
+      </div>
+      <h3>app-personal-details</h3>
+    </div>
+  </ng-container> -->
+
+  <ng-container *ngIf="message.uploadedImg">
+    <div class="img-card">
+      <div class="img-banner">
+        <img class="img-avatar" [src]="getSafeImageUrl(message.uploadedImg.content)" [alt]="message.uploadedImg.name">
+      </div>
+      <h3>{{message.uploadedImg.name}}</h3>
+    </div>
+  </ng-container>
+
+  <span *ngIf="message.endpoint!=='CHATBOT'">
+    {{ message.timestamp | date:'shortTime' }}
+  </span>
+</div>

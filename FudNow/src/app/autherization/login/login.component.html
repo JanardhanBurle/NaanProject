@@ -1,0 +1,15 @@
+<div class="container-fluid" style="background-image:url('./assets/img/app_background.png')">
+  <div class="login-container">
+    <!-- <img class="fud-now-logo" src="./assets/img/fudnow_img.png" /> -->
+    <div id="logo-wraper">
+      <img class="rotating-img fudnow-logo" src="./assets/img/fudnow_img.png" />
+      <img class="rotating-img fudnow-logo" hidden src="./assets/img/fudnow_img.png" />
+    </div>
+    <br>
+    <div class="fud-now-tv-label">FUD Now TV</div>
+    <div class="find-ur-dine-label">Find Ur Dine</div>
+    <input #loginInput type="password" [appLoginPin]="loginInput.value" placeholder="Enter your access key here" class="fud-now-password"
+    />
+    <button type="button" [disabled]="!loginInput.value" (click)="loginUser(loginInput.value)" class="btn btn-danger waves-effect waves-light fud-now-start-button">Start</button>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+<h2 mat-dialog-title>{{popupTitle}}</h2>
+<mat-dialog-content class="mat-typography">
+  <div *ngIf="showPromoForm;else LoadingPage">
+    <form [formGroup]="createPromotion" (ngSubmit)="onLoginSubmit()">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="nbk-label">Promotion Name</div>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" type="text" formControlName="promoName" />
+        </div>
+        <div class="col-sm-2">
+          <div class="nbk-label">Promotion Code</div>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" id="raffleDate" class="form-control" disabled [value]="promoId">
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="nbk-label">Promotion Type</div>
+        </div>
+        <div class="col-sm-4">
+          <select class="form-control" id="promocodeSelect" formControlName="promoType">
+            <option value="null">Select
+            </option>
+            <option [ngValue]="promoType._id" *ngFor="let promoType of promotionTypes">
+              {{promoType.name}}
+            </option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <div class="nbk-label">Schedule Date</div>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field>
+            <input formControlName="scheduledDate" matInput [matDatepicker]="picker" placeholder="" [disabled]="true">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker disabled="false"></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="nbk-label">Winner Type</div>
+        </div>
+        <div class="col-sm-4">
+          <!-- <input class="form-control" type="text" formControlName="winnerType" /> -->
+          <select class="form-control" formControlName="typeOfWinner" (change)="changeWinnerType()">
+            <option value="null">Select
+            </option>
+            <option value="1">
+              Multiple
+            </option>
+            <option value="2">
+              Sequence
+            </option>
+            <option value="3">
+              Single
+            </option>
+          </select>
+        </div>
+        <div class="col-sm-3">
+          <div class="nbk-label">Is Approval Required?</div>
+        </div>
+        <div class="col-sm-3">
+          <mat-slide-toggle formControlName="approvalRequired"></mat-slide-toggle>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="nbk-label">No.of Winners</div>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" type="number" formControlName="noOfWinners" />
+        </div>
+        <div class="col-sm-3">
+          <div class="nbk-label">Standby Winner required?</div>
+        </div>
+        <div class="col-sm-3">
+          <mat-slide-toggle formControlName="standByWinnerRequired"></mat-slide-toggle>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="nbk-label">No.of Prizes</div>
+        </div>
+        <div class="col-sm-2">
+          <input class="form-control" type="number" formControlName="noOfPrizes" />
+        </div>
+        <div class="col-sm-2">
+          <!-- <a src="">Add Prizes</a> -->
+        </div>
+      </div>
+      <br>
+
+      <div class="prize-card" formArrayName="prizes" *ngFor="let prize of createPromotion.controls.prizes?.value; let i = index">
+        <ng-container [formGroupName]="i">
+          <div class="prize-no">{{i+1}}</div>
+          <img class="prize-img" [src]="getSafeImageUrl(prize.content)" [alt]="prize.name" />
+          <!-- <div style="font-size: 15px;font-weight: bold;">
+                {{prize.name}}
+              </div> -->
+          <br>
+          <div *ngIf="createPromotion.controls.isCompleted.value===false" class="fileUpload nbk-primary-inverse-btn">
+            <!-- <span>{{prize.fileStatus}}</span> -->
+            <i class="material-icons">
+              cloud_upload
+            </i>
+            <input type="file" class="upload-prizes" (change)="fileChangeListener($event.target,prize)" id="uploadExcel" />
+          </div>
+        </ng-container>
+      </div>
+
+
+
+    </form>
+  </div>
+  <ng-template #LoadingPage>
+    Please wait. Loading.......
+  </ng-template>
+
+</mat-dialog-content>
+<mat-dialog-actions *ngIf="showPromoForm" align="end">
+  <button class="nbk-secondary-btn" *ngIf="!promotionData.isCompleted" mat-button mat-dialog-close>Cancel</button>
+  <button class="nbk-secondary-btn" *ngIf="promotionData.isCompleted" mat-button mat-dialog-close>Close</button>
+  <button class="nbk-primary-btn" [disabled]="!createPromotion.valid" *ngIf="!promotionData.isCompleted" mat-button [mat-dialog-close]="sendPromoInfo()"
+    mat-button cdkFocusInitial>Save</button>
+</mat-dialog-actions>

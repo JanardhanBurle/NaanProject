@@ -1,0 +1,21 @@
+.initiator-body{
+    background: radial-gradient(#80cfee,#0b4b79) !important;
+    color: #FFF !important;
+    height: 85vh;
+    font-family: 'Play', sans-serif;
+    padding: 1% 12%;
+}
+
+.current-date-time{
+    height: 5%;
+    font-size: 15px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+ }
+
+ .initiator-router-outlet{
+    height: 95%;
+ }
+
+

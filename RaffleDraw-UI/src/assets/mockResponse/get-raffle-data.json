@@ -1,0 +1,76 @@
+{
+    "raffleData": [
+        {
+            "raffleId": 1,
+            "date": "2019-03-15T05:22:48.329Z",
+            "promotionCode": 1,
+            "promoType": "NCCC",
+            "promotionName": "New Credit Card Customers",
+            "raffleName": "Raffle at Avenues mall phase 4",
+            "raffleRef": "RAAMP4",
+            "raffleType": 1,
+            "winners": [],
+            "status": "Active"
+        },
+        {
+            "raffleId": 2,
+            "date": "2019-03-15T05:23:23.568Z",
+            "promotionCode": 2,
+            "promoType": "250KTC",
+            "promotionName": "More than 250K KWD Transacted Customers",
+            "raffleName": "Raffle at Al-Salam Mall",
+            "raffleRef": "RAAM",
+            "raffleType": 1,
+            "winners": [],
+            "status": "Active"
+        },
+        {
+            "raffleId": 3,
+            "date": "2019-03-15T05:23:42.997Z",
+            "promotionCode": 3,
+            "promoType": "NCCC",
+            "promotionName": "New Credit Card Customers",
+            "raffleName": "Raffle at The Avenues",
+            "raffleRef": "RATA",
+            "raffleType": 1,
+            "winners": [],
+            "status": "Active"
+        },
+        {
+            "raffleId": 4,
+            "date": "2019-03-15T05:23:52.488Z",
+            "promotionCode": 6,
+            "promoType": "NOOBC",
+            "promotionName": "Newly Onboarded Online Banking Customers",
+            "raffleName": "Raffle at سوق شرق Souk Sharq",
+            "raffleRef": "RAسشSS",
+            "raffleType": 1,
+            "winners": [],
+            "status": "Active"
+        },
+        {
+            "raffleId": 5,
+            "date": "2019-03-15T05:24:30.936Z",
+            "promotionCode": 5,
+            "promoType": "250KTC",
+            "promotionName": "More than 250K KWD Transacted Customers",
+            "raffleName": "Raffle at Al Rai Real Estate Co.",
+            "raffleRef": "RAARREC",
+            "raffleType": 1,
+            "winners": [],
+            "status": "Active"
+        },
+        {
+            "raffleId": 6,
+            "date": "2019-03-15T05:24:47.201Z",
+            "promotionCode": 4,
+            "promoType": "NOOBC",
+            "promotionName": "Newly Onboarded Online Banking Customers",
+            "raffleName": "Raffle at Al-Bairaq mall",
+            "raffleRef": "RAAM",
+            "raffleType": 1,
+            "winners": [],
+            "status": "Active"
+        }
+    ]
+}

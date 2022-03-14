@@ -1,0 +1,418 @@
+/* @import url('https://fonts.googleapis.com/css?family=Nosifer'); */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clock {
+    position: relative;
+    top: 25px;
+    left: 17%;
+    height: 100px;
+    width: 450px;
+    background-color: black;
+    align-self: center;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dot1::after,
+.dot1::before,
+.dot2::after,
+.dot2::before {
+    content: '';
+    border: 5px solid white;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.dot1::after {
+    top: 60px;
+    left: 135px;
+}
+
+.dot1::before {
+    top: 35px;
+    left: 135px;
+}
+
+.dot2::after {
+    top: 60px;
+    left: 284px;
+}
+
+.dot2::before {
+    top: 35px;
+    left: 284px;
+}
+
+.box {
+    position: relative;
+    height: 125px;
+    width: 50px;
+    background-color: transparent;
+    /* border: 1px solid black; */
+}
+
+.seg {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    width: 18px;
+    display: block;
+}
+
+.seg::after {
+    content: '';
+    border: 3px solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+}
+
+.seg::before {
+    content: '';
+    border: 3px solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+}
+
+.a {
+    left: 5px;
+    top: 10px;
+}
+
+.a::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.a::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+.b {
+    top: 15px;
+    right: 20px;
+    transform-origin: right;
+    transform: rotate(-90deg);
+}
+
+.b::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.b::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+.c {
+    bottom: 73px;
+    right: 20px;
+    transform-origin: right;
+    transform: rotate(-90deg);
+}
+
+.c::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.c::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+.d {
+    left: 6px;
+    bottom: 48px;
+}
+
+.d::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.d::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+.e {
+    bottom: 55px;
+    right: 35px;
+    transform-origin: left;
+    transform: rotate(-90deg);
+}
+
+.e::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.e::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+.f {
+    top: 33px;
+    right: 35px;
+    transform-origin: left;
+    transform: rotate(-90deg);
+}
+
+.f::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.f::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+.g {
+    left: 4px;
+    top: 40px;
+}
+
+.g::after {
+    top: 1px;
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.g::before {
+    top: 1px;
+    right: -3px;
+    transform: rotate(135deg);
+}
+
+/* one */
+
+#one .b,
+#one .c {
+    background-color: white;
+}
+
+#one>.b::after,
+#one>.b::before,
+#one>.c::after,
+#one>.c::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* two  */
+
+#two .a,
+#two .b,
+#two .g,
+#two .e,
+#two .d {
+    background-color: white;
+}
+
+#two>.a::after,
+#two>.a::before,
+#two>.b::after,
+#two>.b::before,
+#two>.g::after,
+#two>.g::before,
+#two>.e::after,
+#two>.e::before,
+#two>.d::after,
+#two>.d::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* three */
+
+#three .a,
+#three .b,
+#three .g,
+#three .c,
+#three .d {
+    background-color: white;
+}
+
+#three>.a::after,
+#three>.a::before,
+#three>.b::after,
+#three>.b::before,
+#three>.g::after,
+#three>.g::before,
+#three>.c::after,
+#three>.c::before,
+#three>.d::after,
+#three>.d::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* four */
+
+#four .b,
+#four .f,
+#four .g,
+#four .c {
+    background-color: white;
+}
+
+#four>.b::after,
+#four>.b::before,
+#four>.f::after,
+#four>.f::before,
+#four>.g::after,
+#four>.g::before,
+#four>.c::after,
+#four>.c::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* five */
+
+#five .a,
+#five .f,
+#five .g,
+#five .c,
+#five .d {
+    background-color: white;
+}
+
+#five>.a::after,
+#five>.a::before,
+#five>.f::after,
+#five>.f::before,
+#five>.g::after,
+#five>.g::before,
+#five>.c::after,
+#five>.c::before,
+#five>.d::after,
+#five>.d::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* six */
+
+#six>.seg {
+    background-color: white;
+}
+
+#six>.seg::after,
+#six>.seg::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+#six .b {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#six>.b::after,
+#six>.b::before {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+/* eight */
+
+#eight>.seg {
+    background-color: white;
+}
+
+#eight>.seg::after,
+#eight>.seg::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* zero */
+
+#zero>.seg {
+    background-color: white;
+}
+
+#zero>.seg::after,
+#zero>.seg::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+#zero .g {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#zero>.g::after,
+#zero>.g::before {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+/* seven */
+
+#seven .a,
+#seven .b,
+#seven .c {
+    background-color: white;
+}
+
+#seven>.a::after,
+#seven>.a::before,
+#seven>.c::after,
+#seven>.c::before,
+#seven>.b::after,
+#seven>.b::before {
+    border-top-color: white;
+    border-left-color: white;
+}
+
+/* nine */
+
+#nine .a,
+#nine .f,
+#nine .g,
+#nine .c,
+#nine .b,
+#nine .d {
+    background-color: white;
+}
+
+#nine>.a::after,
+#nine>.a::before,
+#nine>.f::after,
+#nine>.f::before,
+#nine>.g::after,
+#nine>.g::before,
+#nine>.c::after,
+#nine>.c::before,
+#nine>.b::after,
+#nine>.b::before,
+#nine>.d::after,
+#nine>.d::before {
+    border-top-color: white;
+    border-left-color: white;
+}

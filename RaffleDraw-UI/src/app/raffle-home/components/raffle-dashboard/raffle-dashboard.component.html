@@ -1,0 +1,111 @@
+<br>
+<div class="row">
+  <div class="col-sm-9">
+    <div *ngIf="raffledata.isCompleted===false">
+      <mat-card class="welcome-card">
+        <mat-card-header>
+          <h1 class="welcome-text">
+            Welcome!
+            <br> The next raffle begins in
+          </h1>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="timer-display">
+
+            <countdown-timer [end]="'2019-05-22 12:00:00'"></countdown-timer>
+            <br>
+            <div class="timer-span">(Days : Hours : Mins : Sec)</div>
+
+            <div class="flex-item">
+              <a (click)="runRaffle()" [appScreenfull]="'enable'" class="btn btn-default">
+                Begin Raffle
+              </a>
+            </div>
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+
+    <div *ngIf="raffledata.isCompleted===true">
+      <mat-card class="welcome-card">
+        <mat-card-header>
+          <h1 class="welcome-text">
+            Welcome!
+          </h1>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="timer-display">
+
+            <div class="flex-item">
+              <a (click)="runRaffle()" [appScreenfull]="'enable'" class="btn btn-default">
+                View Winners
+              </a>
+            </div>
+          </div>
+
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+
+
+    <br>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="phone-header-image"></div>
+            <mat-card-title>+ 1801801</mat-card-title>
+          </mat-card-header>
+        </mat-card>
+      </div>
+      <div class="col-sm-4">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="website-header-image"></div>
+            <mat-card-title>
+              <a href="https://www.nbk.com" target="_blank">www.nbk.com</a>
+            </mat-card-title>
+          </mat-card-header>
+        </mat-card>
+      </div>
+      <div class="col-sm-4">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="time-header-image"></div>
+            <mat-card-title>{{currentDate()| date :'medium'}}</mat-card-title>
+          </mat-card-header>
+        </mat-card>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="col-sm-3">
+    <mat-card style="    min-height: 270px;" class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="prize-header-image"></div>
+        <mat-card-title>Today's Grand Prize</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="../../../../assets/images/car_prize.png" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+      </mat-card-content>
+    </mat-card>
+
+    <br>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="winners-header-image"></div>
+        <mat-card-title>Number of Winners</mat-card-title>
+      </mat-card-header>
+      <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+      <mat-card-content>
+        <h1 class="number-winner">{{numberOfWinners}}</h1>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

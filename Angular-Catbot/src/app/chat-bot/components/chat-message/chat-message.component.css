@@ -1,0 +1,257 @@
+
+
+.user-message-card {
+    margin-left: 25px;
+    float: right;
+}
+
+.agent-message-card .mat-card-image:first-child {
+    margin-top: -50px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.agent-message-card .mat-card-image{
+    width: 30px;
+    position: relative;
+    top: 50px;
+    left: 5px;
+}
+
+
+
+
+.user-message-card p {
+    background: linear-gradient(45deg, #285bce,#24b3eb);
+    padding: 5px 10px;
+    color: #FFF;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    width: auto;
+    float: right;
+}
+
+.user-message-card span {
+    font-size: 10px;
+    float: right;
+    color: grey;
+    position: relative;
+    top: 29px;
+    font-weight: bold;
+    right: -120px;
+    display:none;
+}
+
+
+.user-message-card .img-card{
+    float: right;
+}
+
+
+.agent-message-card p {
+    background:linear-gradient(45deg, #3f51b5cc, #004f96);
+    padding: 5px 10px;
+    color: #FFF;
+    font: 400 14px/20px 'Cairo', sans-serif;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    width: fit-content;
+}
+
+.agent-message-card span {
+    position: relative;
+    font-size: 10px;
+    color: grey;
+    font-weight: bold;
+    top: -10px;
+}
+
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    background: linear-gradient(45deg, #1badefbf, #03A9F4);
+    color: #FFF;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+
+
+::ng-deep .mat-chip-list-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+    justify-content: center !important;
+    background: radial-gradient(transparent, #35c1eb47);
+}
+
+
+
+.card{
+	width: 150px; /* ⬅ Size - Small (width: 200px), Medium (width: 225px), Large (width: 250px) */
+	overflow: hidden;
+	background-color: #FFFFFF;
+   
+	border-radius: 15px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	text-align: center;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+	.card:first-of-type{
+		margin-right: 25px;
+	}
+
+	.card:hover{
+		box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	}
+
+.banner{
+	height: 85px;
+	width: 100%;
+	padding-top: 5px;
+	background-color: #FAFAFA;
+	background-size: cover;
+	background-position: center;
+}
+
+	.card:first-of-type .banner{
+		background-image: url("https://pbs.twimg.com/profile_banners/1026096500902903809/1556969620/1500x500");
+	}
+
+.avatar{
+	height: 80px;
+	width: 80px;
+	margin: auto;
+	background-size: cover;
+	background-position: center;
+	background-color: #F1F1F1;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+h3, a, i{
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+	-webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+	h3{
+        background: linear-gradient(45deg, #8821fc, #136ffad9);
+        padding: 5px 10px;
+        color: #FFF;
+        font: 400 14px/20px 'Cairo', sans-serif;
+        margin: 0;
+	}
+
+
+    .fileupload-input{
+        position: relative;
+        top: -85px;
+        left: 0px;
+        line-height: 53px;
+        opacity: 0;
+        cursor: pointer;
+        min-height: 80px;
+        width: 80px;
+    }
+
+
+    .img-card {
+    width: 300px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: .1s ease-in-out;
+}
+
+
+.personal-info-card {
+    width: 300px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: .1s ease-in-out;
+}
+
+
+.personal-info-banner{
+    height: 150px;
+    width: 100%;
+    background-color: #FAFAFA;
+    background-size: cover;
+    background-position: center;
+    padding:10px;
+}
+
+.img-banner {
+    height: 150px;
+    width: 100%;
+    background-color: #FAFAFA;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-avatar {
+    height: 150px;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+
+.date-picker-input{
+    display: none !important;
+}
+
+@media (orientation: landscape){
+
+::ng-deep .mat-datepicker-content-touch .mat-calendar {
+    width: 100px !important;
+    height: 100px !important;
+}
+::ng-deep .mat-datepicker-content-touch .mat-calendar {
+    min-width: 250px !important;
+    min-height: 310px !important;
+    max-width: 500px !important;
+    max-height: 500px !important;
+}
+
+
+::ng-deep .mat-datepicker-dialog {
+    max-width: 80vw;
+    pointer-events: auto;
+    position: absolute !important;
+    right: 3% !important;
+    bottom: 30% !important;
+}
+
+}
+
+ 
+
+.google-maps {
+    height: 400px;
+    width: 100%;
+    background-color: #FAFAFA;
+    background-size: cover;
+    background-position: center;
+}
+

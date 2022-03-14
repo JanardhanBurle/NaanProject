@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>
+  GBK Chatbot
+  <button style="float: right;" (click)="onCloseClick()" mat-icon-button aria-label="Example icon-button with a heart icon right">
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
+<mat-dialog-content id="messageContainer" class="mat-typography">
+  <ng-container *ngFor="let message of messages">
+    <app-chat-message [message]="message" (clickEvent)="handleClickEvent($event)"></app-chat-message>
+  </ng-container>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <div class="chatcontrol">
+    <form (submit)="sendMessage()">
+      <mat-form-field class="example-full-width">
+        <input matInput name="content" id="chat-input" [(ngModel)]="message.content">
+      </mat-form-field>
+      <button mat-button type="submit">
+        <mat-icon>send</mat-icon>
+      </button>
+    </form>
+  </div>
+</mat-dialog-actions>

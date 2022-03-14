@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Remove User</h2>
+<mat-dialog-content class="mat-typography">
+  <p>Are you sure want to remove the User:{{data.userId}} ?</p>
+  <br>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="nbk-secondary-btn" mat-button mat-dialog-close>Cancel</button>
+  <button class="nbk-primary-btn" mat-button (click)="removeUser()" cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>

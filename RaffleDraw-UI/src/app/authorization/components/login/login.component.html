@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row content background-box">
+
+    <div class="login-container">
+      <div style="text-align:center" class="">
+        <img class="nbk-logo-login" src="../../../../assets/images/nbk-logo.png" />
+        <div class="app-title">
+          <div>
+            NBK Raffle Draw
+          </div>
+        </div>
+        <hr class="underline">
+        <div class="login-label">
+          Login
+        </div>
+        <p style="font-size:12px;">Please provide your credentials below to access the application.</p>
+        <span *ngIf="loginError" class="error-message"> {{loginError}}</span>
+
+        <div class="login-form">
+          <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+            <input formControlName="userId" class="form-control login-input" type="text" placeholder="User ID" />
+            <br>
+            <input formControlName="password" class="form-control login-input" type="password" placeholder="Password" />
+            <br>
+            <br>
+            <button type="submit" [disabled]="loginForm.invalid" class="nbk-primary-btn btn-login">Login</button>
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+  </div>
+</div>

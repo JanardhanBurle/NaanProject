@@ -1,0 +1,153 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="search5back">
+      <div id="searchbox5">
+        <input matInput (keyup)="applyFilter($event.target.value)" type="search" id="search" name="q" size="40" placeholder="Search..."
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <a (click)="openAddUserDialog()">
+      <img class="card__icon" src="../../../../assets/images/add-user-icon.png" alt="">
+    </a>
+
+  </div>
+</div>
+
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="userId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> User ID </th>
+      <td mat-cell *matCellDef="let row"> {{row.userId}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.userName}} </td>
+    </ng-container>
+
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> role </th>
+      <td mat-cell *matCellDef="let row">
+        {{row.role==='ADMIN'?'Admin':'Raffle Initiator'}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="lastLoginDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Login Date </th>
+      <td mat-cell *matCellDef="let row"> {{row.lastLoginDate | date: 'MMM d, y, h:mm:ss a'}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="raffles">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Raffles</th>
+      <td mat-cell *matCellDef="let row">
+        <a class="view-icon" (click)="openRafflesDialog(row)">
+          <i class="material-icons">library_books
+          </i>
+        </a>
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="view_more">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
+      <td mat-cell *matCellDef="let row"> {{row.change_password}}
+        <div style="    cursor: pointer;
+        color: #004b8e;" [popper]="tooltipcontent" [popperTrigger]="'click'" [popperApplyClass]="'popperSpecialStyle'" [popperPlacement]="'left'">
+          <i class="material-icons">
+            more_vert
+          </i>
+        </div>
+
+        <popper-content #tooltipcontent>
+          <div>
+            <ul class="action-list">
+              <!-- <li>
+                <a class="card" (click)="viewUser()">
+                  <div class="card__content">
+                    <i class="material-icons">
+                      visibility
+                    </i>
+                    <span class="card__baseLine">View User</span>
+                  </div>
+                </a>
+
+              </li>
+              <li>
+                <a class="card" (click)="openAddUserDialog()">
+                  <div class="card__content">
+                    <i class="material-icons">
+                      create
+                    </i>
+                    <span class="card__baseLine">Edit User</span>
+                  </div>
+                </a>
+
+              </li> -->
+              <li>
+                <a class="menu-card" (click)="openRemoveUserDialog(row)">
+                  <div class="card__content">
+                    <i class="material-icons">
+                      cancel
+                    </i>
+                    <span class="card__baseLine">Remove User</span>
+                  </div>
+                </a>
+
+              </li>
+              <li>
+                <a class="menu-card" (click)="openLinkRaffleUserDialog(row)">
+                  <div class="card__content">
+                    <i class="material-icons">
+                      link
+                    </i>
+                    <span class="card__baseLine">Manage Raffles to user</span>
+                  </div>
+                </a>
+
+              </li>
+              <!-- <li>
+                <a class="card" (click)="openUnLinkRaffleUserDialog(row)">
+                  <div class="card__content">
+                    <i class="material-icons">
+                      link_off
+                    </i>
+                    <span class="card__baseLine">Remove raffles from user</span>
+                  </div>
+                </a>
+
+              </li> -->
+              <li>
+                <a class="menu-card" (click)="openChangePasswordDialog(row)">
+                  <div class="card__content">
+                    <i class="material-icons">
+                      lock
+                    </i>
+                    <span class="card__baseLine">Reset Password</span>
+                  </div>
+                </a>
+
+              </li>
+            </ul>
+
+          </div>
+        </popper-content>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

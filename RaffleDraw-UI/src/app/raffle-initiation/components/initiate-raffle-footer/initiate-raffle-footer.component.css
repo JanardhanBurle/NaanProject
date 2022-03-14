@@ -1,0 +1,29 @@
+.footer {
+    width: 100%;
+    background-color: #FFF;
+    color: #1A5493;
+    text-align: center;
+    display: flex;
+    height: 15vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 12%;
+    font-family: 'Play', sans-serif;
+ }
+
+ .nbk-footer-logo img {
+width: 150px;
+ }
+
+
+ 
+.nbk-toll-free {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 32px;
+}

@@ -1,0 +1,87 @@
+.top-bar {
+    min-height: 200px;
+    background-color: #004B8E;
+}
+
+.login-container {
+    position: fixed;
+    width: 350px;
+    height: 550px;
+    background-color: #FFF;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.background-box{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #1A5493 50%);
+    min-height: 500px;
+    height: 100vh;
+  }
+ 
+hr.underline { 
+  border: 0; 
+  height: 20px; 
+  background-image: linear-gradient(to left, #f0f0f0, #1a5493, #f0f0f0);
+  background-image: -webkit-linear-gradient(to left, #f0f0f0, #1a5493, #f0f0f0);
+  background-image: -moz-linear-gradient(to left, #f0f0f0, #1a5493, #f0f0f0);
+  background-image: -ms-linear-gradient(to left, #f0f0f0, #1a5493, #f0f0f0);
+  background-image: -o-linear-gradient(to left, #f0f0f0, #1a5493, #f0f0f0) ;
+}
+.nbk-logo-login {
+    padding: 15px;
+    background-color: #FFF;
+    width: 180px;
+}
+
+
+.app-title {
+    text-align: center;
+    font-weight: bold !important;
+    color: #eb2a2e;
+    margin-top: -15px;
+    font-size: 20px;
+}
+
+
+
+
+.login-label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #013a6b;
+}
+
+
+.login-input {
+    height: 38px;
+    font-size: 16px;
+    /* font-weight: bold; */
+}
+
+.login-form{
+    margin:50px;
+}
+
+.link-forgot-password{
+    float:right;
+}
+
+.btn-login {
+    height: 38px;
+    min-width: 150px;
+    font-size: 18px;
+}
+
+
+.error-message {
+    background: red;
+    padding: 5px 20px;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 12px;
+}

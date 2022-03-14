@@ -1,0 +1,32 @@
+<div class="select-raffle">
+  <div class="select-raffle-header">Raffles</div>
+  <div class="select-raffle-carousel-section">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators">
+        <ng-container *ngFor="let raffles of rafflesGroup; let i=index">
+          <li data-target="#carouselExampleIndicators" attr.data-slide-to="{{i}}" [ngClass]="{'active':i===0}"></li>
+        </ng-container>
+      </ol>
+      <div class="carousel-inner">
+        <ng-container *ngFor="let raffles of rafflesGroup; let slideIndex=index">
+          <div class="carousel-item" [ngClass]="{'active':slideIndex===0}">
+            <div class="select-raffle-carousel-item">
+              <ng-container *ngFor="let raffleSubGroup of raffles;let rowIndex=index">
+                <div [@slideInOut] class="raffle-row" [ngClass]="{'raffle-section-one': rowIndex===0, 'raffle-section-two': rowIndex===1,'raffle-section-three': rowIndex===2 }">
+                  <ng-container *ngFor="let raffleItem of raffleSubGroup ; let raffleIndex=index">
+                    <div class="raffle-item" (click)="beginRaffle(raffleItem)" [ngStyle]="{ 'background-image': 'url(' + raffleItem.img + ')'}"
+                      [ngClass]="{'raffle-item-completed':raffleItem.status==='COMPLETED'}">
+                      <!-- <img class="raffle-item-img" [src]="raffleItem.img" alt="Third slide"> -->
+                      <div *ngIf="raffleItem.status==='COMPLETED'" class="raffle-item-completed-label">Completed</div>
+                      <div class="raffle-item-name">{{raffleItem.raffleName}}</div>
+                    </div>
+                  </ng-container>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

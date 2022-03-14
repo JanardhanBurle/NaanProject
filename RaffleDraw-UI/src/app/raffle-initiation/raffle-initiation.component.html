@@ -1,0 +1,10 @@
+<div class="initiator-body">
+    <div class="initiator-router-outlet">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="current-date-time">
+        <span style="margin-right:10px">{{now| date :'fullDate'}}</span>
+        <span>{{now| date :'mediumTime'}}</span>
+    </div>
+</div>
+<app-initiate-raffle-footer></app-initiate-raffle-footer>

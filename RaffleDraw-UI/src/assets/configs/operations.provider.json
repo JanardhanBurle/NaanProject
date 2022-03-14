@@ -1,0 +1,26 @@
+{
+    "validateUserLogin": {
+        "baseUrl": "apiGateway",
+        "path": "api/auth"
+    },
+    "resetPassword": {
+        "baseUrl": "apiGateway",
+        "path": "api/auth"
+    },
+    "user": {
+        "baseUrl": "apiGateway",
+        "path": "api/users"
+    },
+    "raffle": {
+        "baseUrl": "apiGateway",
+        "path": "api/raffle"
+    },
+    "promotion": {
+        "baseUrl": "apiGateway",
+        "path": "api/promotion"
+    },
+    "getPromotionTypes": {
+        "baseUrl": "apiGateway",
+        "path": "api/promotion-type"
+    }
+}

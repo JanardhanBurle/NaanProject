@@ -1,0 +1,293 @@
+<h2 mat-dialog-title>{{popupTitle}}</h2>
+<mat-dialog-content class="mat-typography">
+  <form *ngIf="raffleLoaded; else loading" [formGroup]="createRaffle" (ngSubmit)="onLoginSubmit()">
+
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="nbk-label">Raffle Name</div>
+      </div>
+      <div class="col-sm-4">
+        <input formControlName="raffleName" class="form-control" [ngClass]="{'required-control': validateControl('raffleName')}"
+          type="text" />
+      </div>
+      <div class="col-sm-2">
+        <div class="nbk-label">Raffle Date</div>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field>
+          <input formControlName="raffleDate" matInput [matDatepicker]="picker" placeholder="" disabled>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker disabled="false"></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="nbk-label">Promotion Code</div>
+      </div>
+      <div class="col-sm-4">
+        <select formControlName="promotion" class="form-control" [ngClass]="{'required-control': validateControl('promotion')}">
+          <option value="0">select</option>
+          <option [ngValue]="promo._id" *ngFor="let promo of promotionsList">
+            {{promo.promoName}}
+          </option>
+        </select>
+      </div>
+      <div class="col-sm-2">
+        <div class="nbk-label">Raffle Type</div>
+
+      </div>
+      <div [ngClass]="{'col-sm-4':createRaffle.controls['raffleType'].value!==2||createRaffle.controls['raffleType'].value!==3,
+      'col-sm-2':createRaffle.controls['raffleType'].value===2||createRaffle.controls['raffleType'].value===3}">
+        <select formControlName="raffleType" class="form-control" [ngClass]="{'required-control': validateControl('raffleType')}">
+          <option value="null">Select</option>
+          <option value="1">Manual</option>
+          <option value="2">Semi Auto</option>
+          <option value="3">Auto</option>
+        </select>
+      </div>
+
+      <div *ngIf="createRaffle.controls['raffleType'].value===2||createRaffle.controls['raffleType'].value===3" class="col-sm-2">
+        <select formControlName="raffleDuration" class="form-control">
+          <option selected value="10">10sec</option>
+          <option value="5">5sec</option>
+          <option value="3">3sec</option>
+        </select>
+      </div>
+    </div>
+    <br>
+
+
+
+    <div *ngIf="!raffleData.isCompleted">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="fileUpload nbk-primary-inverse-btn">
+            <span class="load-raffle-data">{{fileName}}</span>
+            <input class="uploadRaffleData" type="file" (change)="fileChangeListener($event)" id="uploadExcel" />
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="nbk-label">Raffle Status :</div>
+        </div>
+        <div class="col-sm-1">
+          <div id="dataStatus" class="raffle-status">
+            <strong>{{fileUploadStatus}}</strong>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="nbk-label">Total Records:</div>
+        </div>
+        <div class="col-sm-1">
+          <div id="totalRecords" class="raffle-status">
+            <strong>{{totalRecords}}</strong>
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <button type="button" class="nbk-primary-inverse-btn">View Raffle Data</button>
+        </div>
+      </div>
+    </div>
+    <!-- <br>
+      <br>
+      <div style="text-align: center;">
+        <button id="startRaffle" type="button" [disabled]="!raffleCustomersInfo||this.raffleWinners.length>=this.numberOfWinners"
+          (click)="startRaffle()" class="nbk-start-raffle-btn">Start Raffle</button>
+      </div>
+      <div id="startRaffleError" style="text-align: center; color:red;font-weight:bold"></div>
+
+      <div class="raffleDisplay">
+        <div class="stage">
+          <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+            <defs>
+              <lineargradient id="theGradient" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="200" y2="400">
+                <stop offset="0%" stop-color="#000000" />
+                <stop offset="25%" stop-color="#fff" />
+                <stop offset="75%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#000000" />
+              </lineargradient>
+              <mask id="theMask">
+                <rect x="0" y="0" width="400" height="400" fill="url(#theGradient)" />
+              </mask>
+            </defs>
+
+            <rect x="0" y="0" width="400" height="400" fill="#444" />
+            <g mask="">
+              <rect x="0" y="0" width="400" height="400" fill="#f24043" />
+              <line x1="2" y1="0" x2="2" y2="400" stroke-width="4" stroke="#fff" />
+              <line x1="398" y1="0" x2="398" y2="400" stroke-width="4" stroke="#fff" />
+              <text id="node00" transform="translate(200 300)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+              <text id="node01" transform="translate(200 -100)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+            </g>
+          </svg>
+          <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+            <defs>
+              <lineargradient id="theGradient" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="200" y2="400">
+                <stop offset="0%" stop-color="#000000" />
+                <stop offset="25%" stop-color="#fff" />
+                <stop offset="75%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#000000" />
+              </lineargradient>
+              <mask id="theMask">
+                <rect x="0" y="0" width="400" height="400" fill="url(#theGradient)" />
+              </mask>
+            </defs>
+
+            <rect x="0" y="0" width="400" height="400" fill="#444" />
+            <g mask="">
+              <rect x="0" y="0" width="400" height="400" fill="#f24043" />
+              <line x1="2" y1="0" x2="2" y2="400" stroke-width="4" stroke="#fff" />
+              <line x1="398" y1="0" x2="398" y2="400" stroke-width="4" stroke="#fff" />
+              <text id="node10" transform="translate(200 300)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+              <text id="node11" transform="translate(200 -100)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+            </g>
+          </svg>
+          <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+            <defs>
+              <lineargradient id="theGradient" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="200" y2="400">
+                <stop offset="0%" stop-color="#000000" />
+                <stop offset="25%" stop-color="#fff" />
+                <stop offset="75%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#000000" />
+              </lineargradient>
+              <mask id="theMask">
+                <rect x="0" y="0" width="400" height="400" fill="url(#theGradient)" />
+              </mask>
+            </defs>
+
+            <rect x="0" y="0" width="400" height="400" fill="#444" />
+            <g mask="">
+              <rect x="0" y="0" width="400" height="400" fill="#f24043" />
+              <line x1="2" y1="0" x2="2" y2="400" stroke-width="4" stroke="#fff" />
+              <line x1="398" y1="0" x2="398" y2="400" stroke-width="4" stroke="#fff" />
+              <text id="node20" transform="translate(200 300)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+              <text id="node21" transform="translate(200 -100)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+            </g>
+          </svg>
+
+          <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+            <defs>
+              <lineargradient id="theGradient" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="200" y2="400">
+                <stop offset="0%" stop-color="#000000" />
+                <stop offset="25%" stop-color="#fff" />
+                <stop offset="75%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#000000" />
+              </lineargradient>
+              <mask id="theMask">
+                <rect x="0" y="0" width="400" height="400" fill="url(#theGradient)" />
+              </mask>
+            </defs>
+
+            <rect x="0" y="0" width="400" height="400" fill="#444" />
+            <g mask="">
+              <rect x="0" y="0" width="400" height="400" fill="#f24043" />
+              <line x1="2" y1="0" x2="2" y2="400" stroke-width="4" stroke="#fff" />
+              <line x1="398" y1="0" x2="398" y2="400" stroke-width="4" stroke="#fff" />
+              <text id="node30" transform="translate(200 300)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+              <text id="node31" transform="translate(200 -100)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+            </g>
+          </svg>
+          <svg id="demo" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+            <defs>
+              <lineargradient id="theGradient" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="200" y2="400">
+                <stop offset="0%" stop-color="#000000" />
+                <stop offset="25%" stop-color="#fff" />
+                <stop offset="75%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#000000" />
+              </lineargradient>
+              <mask id="theMask">
+                <rect x="0" y="0" width="400" height="400" fill="url(#theGradient)" />
+              </mask>
+            </defs>
+
+            <rect x="0" y="0" width="400" height="400" fill="#444" />
+            <g mask="">
+              <rect x="0" y="0" width="400" height="400" fill="#f24043" />
+              <line x1="2" y1="0" x2="2" y2="400" stroke-width="4" stroke="#fff" />
+              <line x1="398" y1="0" x2="398" y2="400" stroke-width="4" stroke="#fff" />
+              <text id="node40" transform="translate(200 300)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+              <text id="node41" transform="translate(200 -100)" text-anchor="middle" font-size="320" fill="#fff">0</text>
+            </g>
+          </svg>
+
+
+
+
+        </div>
+
+      </div>
+
+      <div *ngIf="createRaffle.controls.raffleType.value !== '2'" style="text-align: center;">
+        <button id="stopRaffle" (click)="stopRaffle('manual')" [disabled]="this.raffleWinners.length>=this.numberOfWinners" type="button"
+          class="nbk-start-raffle-btn">Select Winner
+        </button>
+      </div>
+    </div>
+
+
+    <div *ngIf="raffleWinnersList">
+      <div style="text-align:center;margin: 10px;">
+        <span [matBadge]="this.raffleWinners.length" matBadgeOverlap="false" class="raffle-header">Raffle Winners</span>
+        <hr class="raffle-hr-line">
+      </div>
+
+      <br>
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="raffleWinnersList" matSort>
+
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Winner </th>
+            <td mat-cell *matCellDef="let row;let i=index"> {{i+1}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Customer Name </th>
+            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+          </ng-container>
+
+
+
+          <ng-container matColumnDef="accountNumber">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Account Number </th>
+            <td mat-cell *matCellDef="let row">
+              {{row.accountNumber}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="raffleCode">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Raffle Code </th>
+            <td mat-cell *matCellDef="let row"> {{row.raffleCode}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="prize">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Prize </th>
+            <td mat-cell *matCellDef="let row">
+              <img height="60px" [src]="getSafeImageUrl(row.prize)" alt="prize icon" />
+            </td>
+          </ng-container>
+
+
+          <tr mat-header-row *matHeaderRowDef="winnerColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: winnerColumns;">
+          </tr>
+        </table>
+
+      </div>
+    </div> -->
+
+
+
+  </form>
+  <ng-template #loading>
+    <div style="text-align:center">Loading Raffle...</div>
+  </ng-template>
+</mat-dialog-content>
+<mat-dialog-actions align="end" *ngIf="raffleLoaded&&raffleData">
+  <button class="nbk-secondary-btn" *ngIf="!raffleData.isCompleted" mat-button [mat-dialog-close]="cancel">Cancel</button>
+  <button *ngIf="raffleData.isCompleted" class="nbk-secondary-btn" mat-button [mat-dialog-close]="cancel">Close</button>
+  <button class="nbk-primary-btn" *ngIf="!raffleData.isCompleted" [disabled]="!createRaffle.valid" mat-button [mat-dialog-close]="sendRaffleInfo()"
+    mat-button cdkFocusInitial>Save</button>
+</mat-dialog-actions>

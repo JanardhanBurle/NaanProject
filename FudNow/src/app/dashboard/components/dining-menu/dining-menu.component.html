@@ -1,0 +1,65 @@
+<section class="ml-3 mr-3 pb-6">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="col-lg-3">
+          <img class="fudnow-logo-dashboard" src="./assets/img/fudnow_img.png" />
+        </div>
+        <div class="col-lg-9">
+          <div class="logo-section-tv">
+            <div class="header-tv">FudNowTV</div>
+            <div class="header-app">Find Ur Dine</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="essence-of-india-title example z-depth-3">
+        Essence Of India
+      </div>
+    </div>
+    <div class="text-center col-lg-4">
+      <div class="lunch-timing-section">
+        <div class="lunch-label">Lunch</div>
+        <div class="lunch-value">17:00 - 19:00</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <ng-container *ngFor="let menuItem of menuItems| slice:0:10;let i=index">
+        <app-menu-item [menuItem]="menuItem"></app-menu-item>
+      </ng-container>
+    </div>
+    <div class="col-lg-6">
+      <ng-container *ngFor="let menuItem of menuItems| slice:10:20;let i=index">
+
+        <app-menu-item [menuItem]="menuItem"></app-menu-item>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- <ngx-flip [flip]="flipDiv">
+    <div front>
+      <div class="row">
+        <div class="col-lg-6">
+          <ng-container *ngFor="let menuItem of filterItems('even');let i=index">
+            <app-menu-item></app-menu-item>
+          </ng-container>
+        </div>
+        <div class="col-lg-6">
+          <ng-container *ngFor="let menuItem of filterItems('odd');let i=index">
+
+            <app-menu-item></app-menu-item>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div back>
+     
+    </div>
+  </ngx-flip> -->
+
+
+
+</section>

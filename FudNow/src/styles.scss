@@ -1,0 +1,144 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+.container-fluid {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat; // padding: 10px;
+}
+
+.fudnow-logo {
+    margin: 0;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translate(-0%, -0%);
+    transform: translate(-0%, -0%);
+    text-align: center;
+}
+
+.fudnow-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #FF0B00;
+}
+
+.left {
+    display: table-cell;
+    width: 20%;
+}
+
+.right {
+    display: table-cell;
+    width: 80%;
+}
+
+.right {
+    background: grey;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.essence-of-india-title {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 4px;
+    color: #FFF;
+    background-color: #FF0B00;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+.offers-of-the-day-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.offers-gradient {
+    background-color: #282828;
+    height: 90vh;
+    border-radius: 0px;
+}
+
+.amount-field {
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    top: 0px;
+    right: 10px;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+// **************************************************
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #D4D4D4;
+    opacity: 1;
+    letter-spacing: 5px;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #D4D4D4;
+    letter-spacing: 5px;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #D4D4D4;
+    letter-spacing: 5px;
+}
+
+.fud-now-tv-label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+
+.find-ur-dine-label {
+    font-size: 22px;
+    font-weight: bold;
+    color: #787878;
+    text-align: center;
+}

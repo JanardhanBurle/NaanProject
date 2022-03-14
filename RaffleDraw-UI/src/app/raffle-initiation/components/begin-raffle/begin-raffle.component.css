@@ -1,0 +1,128 @@
+.begin-raffle-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.begin-raffle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:80%;
+}
+
+
+.side-banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:20%;
+}
+
+.header-action-buttons{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    height: 55%;
+}
+
+.raffle-display{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.begin-raffle-section-winner-info{
+    height: 60%;
+    width: 90%;
+}
+
+
+.raffle-wineer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    background: #FFF;
+    color: #1a59a4;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+.title-in,.title-ar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.winner-value{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #1a59a480;
+    border-right: 2px solid #1a59a480;
+    width:50%;
+}
+
+
+.home-button {
+    width: 50px;
+    height: 50px;
+    background: #fdf9f9e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.home-icon{
+    font-size: 25px;
+    color: #1a59a4;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-icon {
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.winners-list-btn {
+    width: 100%;
+    background: #FFF;
+    color: #1a59a4;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ad-side-banner {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    max-height: 100%;
+    border: 3px solid;
+    margin: 10px;
+    border-radius: 20px;
+}

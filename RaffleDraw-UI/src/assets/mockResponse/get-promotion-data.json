@@ -1,0 +1,58 @@
+{
+    "promotionData": [
+        {
+            "promoCode": 1,
+            "promoType": "NCCC",
+            "promoDescription": "New Credit Card Customers",
+            "date": "2019-03-15T03:23:49.077Z",
+            "status": "Active",
+            "view_promo": "",
+            "prizesData": []
+        },
+        {
+            "promoCode": 2,
+            "promoType": "250KTC",
+            "promoDescription": "More than 250K KWD Transacted Customers",
+            "date": "2019-03-15T03:23:49.077Z",
+            "status": "Active",
+            "view_promo": "",
+            "prizesData": []
+        },
+        {
+            "promoCode": 3,
+            "promoType": "NCCC",
+            "promoDescription": "New Credit Card Customers",
+            "date": "2019-03-15T03:23:49.077Z",
+            "status": "Active",
+            "view_promo": "",
+            "prizesData": []
+        },
+        {
+            "promoCode": 4,
+            "promoType": "NOOBC",
+            "promoDescription": "Newly Onboarded Online Banking Customers",
+            "date": "2019-03-15T03:23:49.077Z",
+            "status": "Active",
+            "view_promo": "",
+            "prizesData": []
+        },
+        {
+            "promoCode": 5,
+            "promoType": "250KTC",
+            "promoDescription": "More than 250K KWD Transacted Customers",
+            "date": "2019-03-15T03:23:49.077Z",
+            "status": "Active",
+            "view_promo": "",
+            "prizesData": []
+        },
+        {
+            "promoCode": 6,
+            "promoType": "NOOBC",
+            "promoDescription": "Newly Onboarded Online Banking Customers",
+            "date": "2019-03-15T03:23:49.077Z",
+            "status": "Active",
+            "view_promo": "",
+            "prizesData": []
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+.login-container {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fud-now-logo {
+    width: 40%;
+}
+
+
+.fud-now-password {
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    letter-spacing: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 1em 0.25em rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.fud-now-start-button {
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #FF0B00 !important;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #D4D4D4;
+    opacity: 1;
+    letter-spacing: 5px;
+    font-size: 15px;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #D4D4D4;
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #D4D4D4;
+    font-size: 15px;
+    letter-spacing: 5px;
+}

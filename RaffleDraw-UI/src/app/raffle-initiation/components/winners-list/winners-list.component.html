@@ -1,0 +1,54 @@
+<div class="winners-container">
+
+  <div class="raffle-winners">
+    <div class="page-header">
+      <div class="header-action-buttons">
+        <div>
+          <i (click)="navigateTo('/raffle-initiation/begin-raffle')" class="material-icons page-icon">
+            arrow_back_ios
+          </i>
+        </div>
+
+        <div class="home-button">
+          <i class="material-icons home-icon">
+            home
+          </i>
+        </div>
+      </div>
+      <div class="raffle-winners-header">
+        Congratulations
+      </div>
+    </div>
+    <div class="winners-list">
+      <table>
+        <tr class="winners-header">
+          <th>Winner Name</th>
+          <th>Draw Name</th>
+          <th>Raffle Prize</th>
+        </tr>
+      </table>
+      <div id="winnersList" class="winners-list-scroller">
+        <table>
+          <ng-container *ngFor="let winner of winnerList">
+            <tr>
+              <td>{{winner.name}}</td>
+              <td>Al Jawahara Draw</td>
+              <td>{{winner.prizeName}}</td>
+            </tr>
+          </ng-container>
+        </table>
+      </div>
+
+    </div>
+    <span class="thanks-msg">Thank you for banking with NBK</span>
+  </div>
+
+  <div class="side-banner">
+    <div class="menu-section">
+      <i class="material-icons page-icon">
+        menu
+      </i>
+    </div>
+    <img class="ad-side-banner" src="../../../../assets/images/aljawahara2.jpg" alt="Third slide">
+  </div>
+</div>

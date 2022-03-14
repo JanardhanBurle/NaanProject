@@ -1,0 +1,8 @@
+.language-conveter{
+    position: fixed;
+    right: 10px;
+    top: 90px;
+    z-index: 1000;
+    background: #f02b2f;
+    border-radius: 50%;
+}

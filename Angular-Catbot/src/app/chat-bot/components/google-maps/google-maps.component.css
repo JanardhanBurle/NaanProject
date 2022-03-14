@@ -1,0 +1,12 @@
+::ng-deep  #google-search {
+    z-index: 10 !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0px !important;
+    background: #ffffffa8 !important;
+    padding: 10px !important;
+    width: 95% !important;
+    font-size: 14px !important;
+    color: #FFFF;
+    text-align: center;
+} 

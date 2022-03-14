@@ -1,0 +1,48 @@
+
+.initiate-raffle-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.initiate-raffle-container-outline{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+
+.carousel-section{
+    width:75vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height:100%;
+    
+}
+
+
+.side-banner{
+    width:25vw;
+    display:flex;
+    flex-direction: row;
+    justify-content:  flex-end;
+    align-items: center;
+    height:100%;
+    
+}
+
+
+.select-raffle-section  {
+    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

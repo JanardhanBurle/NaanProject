@@ -1,0 +1,42 @@
+.trapezoid {
+    border-top: 50px solid #555;
+    border-left: 0px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100%;
+}
+
+.trapezoid2 {
+    border-bottom: 50px solid #555;
+    border-left: 25px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 100%;
+}
+
+.menu-body {
+    height: 90vh !important;
+}
+
+.menu-footer {
+    height: 10vh !important;
+    background-color: #fff;
+    z-index: 3000;
+}
+
+::ng-deep .offers-gradient .card-body {
+    flex: 1 1 auto;
+    padding: 30px !important;
+}
+
+.download-app {
+    text-align: right;
+    margin: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fudnow-red {
+    color: red;
+}

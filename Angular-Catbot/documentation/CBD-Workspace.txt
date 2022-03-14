@@ -1,0 +1,8 @@
+Workspace creation steps
+==========================
+1. Create Workspace:
+	ng new CBD-Workspace
+2. Create your Sub Applications:
+	ng generate application payment-hub–-routing
+	a. to serve the application,
+		ng serve –-project=payment-hub

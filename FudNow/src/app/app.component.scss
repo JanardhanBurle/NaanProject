@@ -1,0 +1,25 @@
+.fudnow-text {
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #FF0B00;
+}
+
+
+.rotating-img
+{
+	-moz-backface-visibility:hidden;
+	-webkit-backface-visibility:hidden !important;
+	-o-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	// position:absolute;
+}

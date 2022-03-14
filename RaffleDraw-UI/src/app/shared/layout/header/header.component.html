@@ -1,0 +1,48 @@
+<nav class="navbar navbar-inverse">
+  <div class="nbk-navbar-header">
+    <a class="navbar-brand-logo" href="#">
+      <img class="nbk-logo" src="./assets/images/nbk-logo.png" />
+    </a>
+
+    <div class="navbar-main-section">
+      <ul class="nav navbar-nav navbar-right nbk-navbar-nav-sec">
+        <li class="hader-menu-items">
+          <a>
+            <i class="material-icons">
+              home
+            </i>
+            <br> Home
+          </a>
+        </li>
+        <li class="active last-login">
+          <span>
+            Last Login: {{userInfo.lastLoginDate | date :'medium'}}</span>
+        </li>
+        <li class="nav-item dropdown  active .header-profile-sec">
+          <a class="nav-item nav-link dropdown-toggle login-user-info" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            {{userInfo.userName}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <span>Hello {{userInfo.userName}}!</span>
+            <br>
+            <br>
+            <div>XXXXXXXXXXX</div>
+            <div>XXXXXXXXXXXXXX</div>
+          </div>
+
+          <div class="login-role">{{userInfo.role}}</div>
+        </li>
+        <li class="hader-menu-items">
+          <a (click)="logout()" style="cursor: pointer;">
+            <i class="material-icons">
+              input
+            </i>
+            <br> Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey": "Janardhan",
+    "db": "'mongodb://localhost/raffle_Production'"
+}

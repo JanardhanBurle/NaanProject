@@ -1,0 +1,10 @@
+{
+    "api": {
+        "apiGateway": "http://192.168.10.13:3000/",
+        "mockIO": "http://locahost:4200/",
+        "localUrl": "http://localhost:4200/",
+        "logUrl": "http://localhost:4400/"
+    },
+    "caheProvider": "sessionStorage",
+    "sessionTimeOut": 35
+}

@@ -1,0 +1,236 @@
+::ng-deep .cdk-overlay-pane {
+    max-width: 100% !important;
+    /* width: 100% !important; */
+}
+
+
+
+.prize-header-image {
+    background-image: url('../../../../assets/images/prize-placeholder.png');
+    background-size: cover;
+  }
+
+  .phone-header-image {
+    background-image: url('../../../../assets/images/phone.png');
+    background-size: cover;
+  }
+
+  .time-header-image {
+    background-image: url('../../../../assets/images/time.png');
+    background-size: cover;
+  }
+
+
+  .current-winner-section{
+    background-image: url('../../../../assets/images/celebrations.gif');
+    background-size: contain;
+  }
+
+  .website-header-image {
+    background-image: url('../../../../assets/images/website.png');
+    background-size: cover;
+  }
+
+
+  .mat-card-image {
+    width: calc(100% + 32px);
+    margin: 0 -16px 16px -16px;
+    padding: 5px 20px;
+}
+
+
+.mat-card-header .mat-card-title {
+    margin: 0px;
+    font-weight: bold;
+    padding: 10px;
+    color: #1a5493;
+    font-size: 13px;
+}
+
+
+.winners-header-image {
+    background-image: url('../../../../assets/images/users.png');
+    background-size: cover;
+  }
+
+  .welcome-text{
+    margin: 10px auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #056bb3;
+    background: linear-gradient(45deg, #09009f, #00ff95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-blend-mode: multiply;
+  }
+
+
+  .number-winner{
+    margin: 10px auto;
+    text-align: center;
+    line-height: 60px;
+    font-size: 70px;
+    font-weight: bold;
+    color: #056bb3;
+  }
+
+  .timer-display{
+    margin: 0px auto;
+    text-align: center;
+    line-height: 65px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #eb2a2e;
+  }
+
+  .timer-span{
+        color: #004b8e;
+    font-size: 16px;
+  }
+
+
+::ng-deep  .mat-card-header-text {
+    margin: 0 0px !important;
+}
+
+
+
+
+
+.btn {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  color: black;
+  padding: 1.5em 2.85em;
+  border-radius: 0px;
+  font-weight: 600;
+  z-index: 500;
+  letter-spacing: 2px;
+  border-color: snow;
+}
+.btn-default {
+  background: linear-gradient(45deg, #90dffb, #328bc1);
+}
+.btn-default::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15px;
+  left: 0;
+  right: 0;
+  background:linear-gradient(45deg, #90dffb, #90dffb);
+  z-index: -1;
+  transform: scale3d(0.75, 0.75, 0.75);
+  filter: blur(25px);
+}
+
+.winners-card{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.raffle-winner {
+  color: #056bb3;
+  background: linear-gradient(45deg, #09009f, #43a27b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-blend-mode: multiply;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: capitalize;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+.winners-list{
+  max-height: 80vh;
+  min-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.flex-item{
+  text-align: center;
+}
+
+
+.nbk-logo {
+  position: relative; 
+  top: 0 !important;
+  left: 0 !important;
+  background-color: #FFF;
+  width: 150px;
+}
+
+#demo {
+  width: auto;
+  height: auto;
+  max-height: 50px;
+  max-width: 50px;
+  font-weight: 700;
+}
+
+.stage {
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.winners-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.winners-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.winners-list::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: 6px solid slategrey;
+}
+
+.select-raffle-winner {
+  color: #056bb3;
+  background: linear-gradient(45deg, #09009f, #43a27b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-blend-mode: multiply;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: capitalize;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.nbk-banner {
+  width: 700px;
+  margin: 0 auto;
+  height: 100px;
+}

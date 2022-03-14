@@ -1,0 +1,34 @@
+<div *ngIf="!menuItem.isMenuCategory">
+  <div class="menu-food-item">
+    <div class="d-flex justify-content-between">
+      <div class="col-10">
+        <div class=" text-truncate">
+          <img class="food-type" *ngIf="menuItem.veg===true" src="./assets/img/veg_icon.png" />
+          <img class="food-type" *ngIf="menuItem.veg===false" src="./assets/img/non_veg_icon.png" />
+          <span class="item-name">{{menuItem.name}}</span>
+          <span class="rating-section">
+            <img class="rating-icon" src="./assets/img/rating_icon.png" /> {{menuItem.rating}}
+          </span>
+        </div>
+        <div class="item-description">
+          <span>
+            {{menuItem.description}}
+          </span>
+        </div>
+      </div>
+      <div class="col-2 item-cost">
+        <div class="">
+          <span class="inr">&#x20b9;</span> {{menuItem.price}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="menuItem.isMenuCategory">
+  <div class="category-name-section">
+    <span class="name-span-menu">
+      {{menuItem.categoryName}}
+
+    </span>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="search5back">
+      <div id="searchbox5">
+        <input matInput (keyup)="applyFilter($event.target.value)" type="search" id="search" name="q" size="40" placeholder="Search..."
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <button *ngIf="userContext.role==='ADMIN'" style="float:right" type="button" (click)="createRaffle()" class="nbk-primary-btn">Create Raffle</button>
+  </div>
+</div>
+<br>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="raffleRef">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Raffle Ref </th>
+      <td mat-cell *matCellDef="let row"> {{row.raffleRef}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="raffleName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Raffle Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.raffleName}} </td>
+    </ng-container>
+
+
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="promotionName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Promotion Name </th>
+      <td mat-cell *matCellDef="let row">
+        {{row.promotion.promoName}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> date </th>
+      <td mat-cell *matCellDef="let row"> {{row.raffleDate | date: 'MMM d, y, h:mm:ss a'}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> status </th>
+      <td mat-cell *matCellDef="let row"> {{row.isCompleted?'Completed':'Active'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="view_raffle">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+      <td mat-cell *matCellDef="let row"> {{row.view_raffle}}
+        <a class="view-icon" *ngIf="this.userContext.role==='ADMIN'" (click)="viewRaffle(row)">
+          <i class="material-icons">visibility</i>
+        </a>
+
+        <a class="view-icon" [appScreenfull]="'enable'" *ngIf="this.userContext.role!=='ADMIN'" (click)="launchRaffle(row)">
+          <i class="material-icons">visibility</i>
+        </a>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

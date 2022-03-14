@@ -1,0 +1,53 @@
+<div class="begin-raffle-page">
+
+  <div class="begin-raffle-section">
+    <div class="raffle-display">
+
+      <div class="header-action-buttons">
+        <div>
+          <i (click)="navigateTo('/raffle-initiation/run-raffle')" class="material-icons page-icon">
+            arrow_back_ios
+          </i>
+        </div>
+        <div class="home-button">
+          <i class="material-icons home-icon" (click)="navigateTo('/raffle-initiation/initiate-raffle')" >
+            home
+          </i>
+        </div>
+      </div>
+
+      <div class="raffle-display-section">
+        <app-raffle-display></app-raffle-display>
+      </div>
+
+    </div>
+
+    <div class="begin-raffle-section-winner-info">
+      <div class="raffle-wineer-info">
+        <div class="title-in">Prize Number</div>
+        <div class="winner-value">{{raffleWinner.id}}</div>
+        <div class="title-ar">رقم الجائزة</div>
+      </div>
+      <div class="raffle-wineer-info">
+        <div class="title-in">Prize Value</div>
+        <div class="winner-value">xxxxxxxxxxxxxxxx</div>
+        <div class="title-ar">قيمة الجائزة</div>
+      </div>
+      <div class="raffle-wineer-info">
+        <div class="title-in">Winner</div>
+        <div class="winner-value">{{raffleWinner.name}}</div>
+        <div class="title-ar">رقم االفائز</div>
+      </div>
+      <div class="raffle-wineer-info">
+        <div class="title-in">Customer Number</div>
+        <div class="winner-value">{{raffleWinner.raffleCode}}</div>
+        <div class="title-ar">رقم الجائرقم العميل</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-banner">
+    <img class="ad-side-banner" src="../../../../assets/images/aljawahara2.jpg" alt="Third slide">
+    <button class="winners-list-btn btn" (click)="navigateTo('/raffle-initiation/winners-list')">Winners list</button>
+  </div>
+</div>

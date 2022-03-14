@@ -1,0 +1,19 @@
+<div class="side-menu-custom">
+  <div class="row">
+    <div class="col-sm-2">
+      <ul class="nav nav-tabs">
+        <li routerLinkActive="active">
+          <a routerLink="user-management">Manage Users</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="raffle-management">Manage Raffle</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-10">
+      <div class="admin-section">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

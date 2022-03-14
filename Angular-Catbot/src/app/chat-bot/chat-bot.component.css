@@ -1,0 +1,42 @@
+::ng-deep .cdk-overlay-pane {
+    pointer-events: auto;
+    position: absolute !important;
+    right: 0px;
+    bottom: 0px;
+}
+
+::ng-deep .mat-dialog-content {
+    max-width: 25vw;
+    min-height: 70vh;
+    min-width: 20vw;
+    padding: 20px 10px !important;
+    background: linear-gradient(45deg, #f8f8f8, #b0defff5) !important;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+::ng-deep  .mat-dialog-container{
+    background: #c61920 !important;
+    color: #FFF  !important;
+}
+
+::ng-deep .mat-dialog-actions {
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 52px;
+    align-items: center;
+    margin-bottom: -24px;
+    background: #FFF;
+    color: #3478fa;
+    margin: 0 -24px;
+}
+
+::ng-deep  .cdk-overlay-dark-backdrop {
+    background: #fff0;
+}
+

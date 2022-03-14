@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add a gray background color and some padding to the footer */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+
+Section
+.visible-scrollbar,  {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+}
+
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #520d86, transparent) 
+}

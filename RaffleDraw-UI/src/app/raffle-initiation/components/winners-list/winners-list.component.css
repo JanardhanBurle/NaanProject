@@ -1,0 +1,136 @@
+.winners-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:95%;
+}
+
+.page-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.menu-section{
+    height: 15%;
+}
+
+.header-action-buttons {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+
+.raffle-winners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 85%;
+}
+
+.page-icon {
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.ad-side-banner {
+    width: 256px !important;
+    height: 80% !important;
+    max-width: 100%;
+    max-height: 100%;
+    border: 3px solid #FFF;
+    border-radius: 10px;
+}
+
+
+.home-button {
+    width: 50px;
+    height: 50px;
+    background: #fdf9f9e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.home-icon{
+        font-size: 25px;
+        color: #1a59a4;
+        display: flex;
+        justify-content: flex-end;
+}
+
+.raffle-winners-header {
+    font-size: 35px;
+    background: #FFF;
+    color: #1a59a4;
+    padding: 0px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.winners-list {
+    width: 85%;
+    height: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.winners-list .winners-header{
+    background: #FFF;
+    color: #1a59a4;
+    font-size: 22px;
+}
+
+.winners-list-scroller{
+    overflow-y: scroll;
+    height: 75%;
+    width: 100%;
+}
+
+
+.winners-list-scroller table {
+    width: 100%;
+    border-bottom: 3px solid #FFF;
+}
+
+.winners-list th , td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #FFF;
+    font-size: 20px;
+}
+
+
+.thanks-msg {
+    background: #FFF;
+    color: #1a59a4;
+    font-weight: bold;
+    padding: 5px 20px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+

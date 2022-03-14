@@ -1,0 +1,73 @@
+.nbk-navbar-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nbk-navbar-nav-sec {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.hader-menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-login {
+    width: 250px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #1a5493;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.navbar-brand-logo{
+    background: #FFF;
+    height: 95px;
+    width: 200px;
+    left: -15px;
+    position: relative;
+    top: -10px;
+}
+
+
+.nbk-logo {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: #FFF;
+    width: 150px;
+}
+
+
+.hader-menu-items:hover{
+    color: #FFF;
+}
+
+.header-profile-sec{
+        width: 200px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #1a5493;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        flex-direction: column;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    float: none;
+}

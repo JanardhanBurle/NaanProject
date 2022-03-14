@@ -1,0 +1,34 @@
+.side-menu-custom .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: black;
+    cursor: default;
+    background-color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+    border-right: 5px solid #C52330;
+}
+
+
+.side-menu-custom .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid #dee2e6;
+    border-radius:0 0 0 0;
+}
+
+
+.side-menu-custom  .nav-tabs>li {
+    color: black;
+    cursor: default;
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    min-width:180px;
+}
+
+
+.side-menu-custom  .nav-tabs {
+    border-bottom: none;
+}

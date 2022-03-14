@@ -1,0 +1,10 @@
+.personal-info{
+    display: flex;
+    font-size: 14px;
+    color: #0c539c;
+    width: 100%;
+}
+
+.edit-icon{
+    font-size: 14px;
+}

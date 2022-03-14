@@ -1,0 +1,92 @@
+.menu-food-item {
+    margin: 10px;
+    border: 1px solid #CCC;
+    padding: 5px;
+    line-height: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    min-width: 100%;
+    background-color: #FFF;
+    font-family: SeoulHangang CBL;
+}
+
+.yellow1 {
+    border: 3px solid yellow;
+}
+
+.red1 {
+    border: 3px solid red;
+}
+
+.grey1 {
+    border: 3px solid grey;
+}
+
+.inr {
+    font-family: SeoulHangang CBL;
+    ;
+}
+
+.food-type {
+    width: 15px;
+    margin-right: 10px;
+}
+
+.rating-icon {
+    width: 10px;
+    position: relative;
+    top: -2px;
+}
+
+.rating-section {
+    margin-left: 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 33px;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: green;
+}
+
+.item-description {
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    width: 100%;
+    color: #979797;
+    font-family: 'poppins', sans-serif;
+}
+
+.item-cost {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #f5f5f5;
+    border-top-left-radius: 50px;
+    background-color: #f5f5f5;
+    color: #1c830c;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category-name-section {
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    font-family: SeoulHangang CBL;
+}
+
+.name-span-menu {
+    width: 100%;
+    margin: 5px;
+    padding: 5px 20px 5px;
+    border-radius: 20px;
+    background-color: #ffffff96;
+    color: #ff0b00;
+    font-family: poppins;
+}

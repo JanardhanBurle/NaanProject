@@ -1,0 +1,18 @@
+{
+    "data": [{
+        "id": "slide1",
+        "url": "assets/images/ob1.png",
+        "title": "11.3% of the population is hungry",
+        "description": "That’s rough 805 million people who go undernourished on a daily basis, consuming less than the recommended 2,100 calories a day."
+    }, {
+        "id": "slide2",
+        "url": "assets/images/ob2.png",
+        "title": "1/3 of the world’s food was lost or wasted",
+        "description": "For millions of people in low-income countries or the homeless, this lost  food can be a meal."
+    }, {
+        "id": "slide3",
+        "url": "assets/images/ob3.png",
+        "title": "$0.5 dollar can provide one meal, 1.5$ three",
+        "description": "That’s rough 805 million people who go undernourished on a daily basis, consuming less than the recommended 2,100 calories a day."
+    }]
+}

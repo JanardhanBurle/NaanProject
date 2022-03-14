@@ -1,0 +1,32 @@
+<div class="initiate-raffle-container">
+  <div class="initiate-raffle-container-outline">
+    <div class="carousel-section">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <ng-container *ngFor="let slide of slides; let i=index">
+            <li data-target="#carouselExampleIndicators" attr.data-slide-to="{{i}}" [ngClass]="{'active':i===0}"></li>
+          </ng-container>
+        </ol>
+        <div class="carousel-inner">
+          <ng-container *ngFor="let slide of slides; let i=index">
+            <div class="carousel-item" [ngClass]="{'active':i===0}">
+              <video *ngIf="slide.type==='VIDEO'" class="d-block w-100 ad-image" controls>
+                <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg"> Your browser does not support the video tag.
+              </video>
+              <img *ngIf="slide.type==='IMG'" class="d-block w-100 ad-image" [src]="slide.contentUrl" [alt]="slide.alt">
+            </div>
+          </ng-container>
+
+        </div>
+        <span class="select-raffle-section">
+          <button class="initiate-raffle-btn btn" (click)="selectRaffle()">Select Raffle</button>
+        </span>
+      </div>
+    </div>
+
+    <div class="side-banner">
+      <img class="d-block w-100 ad-side-banner" src="../../../../assets/images/aljawahara2.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
